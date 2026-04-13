@@ -11,7 +11,6 @@ type Props = {
 
 export default function BikeDetailScreen({ navigation, route }: Props) {
   const { bike } = route.params;
-  const batteryColor = bike.battery > 60 ? '#22c55e' : bike.battery > 30 ? '#f59e0b' : '#ef4444';
 
   return (
     <SafeAreaView style={styles.container}>
@@ -22,23 +21,17 @@ export default function BikeDetailScreen({ navigation, route }: Props) {
 
         <View style={styles.statRow}>
           <View style={styles.stat}>
-            <Text style={[styles.statValue, { color: batteryColor }]}>{bike.battery}%</Text>
-            <Text style={styles.statLabel}>Battery</Text>
-          </View>
-          <View style={styles.divider} />
-          <View style={styles.stat}>
-            <Text style={styles.statValue}>~{Math.round(bike.battery * 0.4)} mi</Text>
-            <Text style={styles.statLabel}>Est. Range</Text>
-          </View>
-          <View style={styles.divider} />
-          <View style={styles.stat}>
             <Text style={styles.statValue}>$1.00</Text>
             <Text style={styles.statLabel}>to unlock</Text>
+          </View>
+          <View style={styles.divider} />
+          <View style={styles.stat}>
+            <Text style={styles.statValue}>$0.15</Text>
+            <Text style={styles.statLabel}>per min</Text>
           </View>
         </View>
 
         <View style={styles.infoBox}>
-          <Text style={styles.infoText}>⚡ E-assist up to 20 mph</Text>
           <Text style={styles.infoText}>🔒 Lock at any bike rack</Text>
           <Text style={styles.infoText}>💳 $0.15 / min after unlock</Text>
         </View>
@@ -68,8 +61,8 @@ const styles = StyleSheet.create({
   statValue: { fontSize: 20, fontWeight: '700', color: '#1e293b' },
   statLabel: { fontSize: 12, color: '#94a3b8', marginTop: 4 },
   divider: { width: 1, backgroundColor: '#e2e8f0' },
-  infoBox: { marginTop: 24, width: '100%', backgroundColor: '#fff', borderRadius: 16, padding: 20, gap: 12, shadowColor: '#000', shadowOpacity: 0.06, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 2 },
-  infoText: { fontSize: 14, color: '#475569' },
+  infoBox: { marginTop: 24, width: '100%', backgroundColor: '#fff', borderRadius: 16, padding: 20, shadowColor: '#000', shadowOpacity: 0.06, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 2 },
+  infoText: { fontSize: 14, color: '#475569', marginBottom: 8 },
   footer: { padding: 24 },
   unlockButton: { backgroundColor: '#f97316', borderRadius: 16, paddingVertical: 18, alignItems: 'center' },
   unlockText: { color: '#fff', fontSize: 18, fontWeight: '700' },

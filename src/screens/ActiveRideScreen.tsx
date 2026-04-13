@@ -77,14 +77,14 @@ export default function ActiveRideScreen({ navigation, route }: Props) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#f8fafc' },
-  content: { flex: 1, padding: 24, gap: 16 },
-  rideCard: { backgroundColor: '#fff', borderRadius: 16, padding: 20, shadowColor: '#000', shadowOpacity: 0.06, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 2 },
+  content: { flex: 1, padding: 24 },
+  rideCard: { backgroundColor: '#fff', borderRadius: 16, padding: 20, marginBottom: 16, shadowColor: '#000', shadowOpacity: 0.06, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 2 },
   ridingLabel: { fontSize: 12, color: '#22c55e', fontWeight: '700', textTransform: 'uppercase', letterSpacing: 1 },
   bikeName: { fontSize: 22, fontWeight: '800', color: '#1e293b', marginTop: 4 },
   location: { fontSize: 14, color: '#64748b', marginTop: 4 },
-  timerCard: { backgroundColor: '#1e293b', borderRadius: 16, padding: 28, alignItems: 'center', shadowColor: '#000', shadowOpacity: 0.1, shadowRadius: 10, shadowOffset: { width: 0, height: 4 }, elevation: 4 },
+  timerCard: { backgroundColor: '#1e293b', borderRadius: 16, padding: 28, alignItems: 'center', marginBottom: 16, shadowColor: '#000', shadowOpacity: 0.1, shadowRadius: 10, shadowOffset: { width: 0, height: 4 }, elevation: 4 },
   timerLabel: { fontSize: 13, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 1 },
-  timer: { fontSize: 64, fontWeight: '800', color: '#fff', fontVariant: ['tabular-nums'], marginTop: 8 },
+  timer: { fontSize: 64, fontWeight: '800', color: '#fff', marginTop: 8 },
   costCard: { backgroundColor: '#fff', borderRadius: 16, padding: 20, alignItems: 'center', shadowColor: '#000', shadowOpacity: 0.06, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 2 },
   costLabel: { fontSize: 13, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 1 },
   cost: { fontSize: 40, fontWeight: '800', color: '#f97316', marginTop: 4 },
